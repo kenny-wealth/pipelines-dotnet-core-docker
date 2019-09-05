@@ -16,14 +16,20 @@ steps:
     #Dockerfile: app/Dockerfile
 
 - task: Docker@2
+  displayName: Login to ACR
+  inputs:
+    command: login
+    containerRegistry: MyAcrConnection
+
+- task: Docker@2
   displayName: Push image to ACR
   inputs:
     command: push
-    #repository: testrepository
+    repository: testrepository
     #dockerfile: $(dockerfilePath)
     #acrUsername: $(ACRUsername)
     #acrUsername: $(ACRUsername)
     #acrUsername: $(ACRUsername)
-    #containerRegistry: http://keladipotestregistry.azurecr.io/
+    containerRegistry: MyAcrConnection
     tags: |
       $(tag)
