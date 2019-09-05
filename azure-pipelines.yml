@@ -19,8 +19,11 @@ steps:
   displayName: Push image to ACR
   inputs:
     command: push
-    repository: testrepository
+    #repository: testrepository
     #dockerfile: $(dockerfilePath)
-    containerRegistry: http://keladipotestregistry.azurecr.io/
+    #acrUsername: $(ACRUsername)
+    #acrUsername: $(ACRUsername)
+    #acrUsername: $(ACRUsername)
+    #containerRegistry: http://keladipotestregistry.azurecr.io/
     tags: |
       $(tag)
