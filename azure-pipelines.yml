@@ -8,11 +8,11 @@ variables:
   imageName: 'pipelines-dotnet-core-docker'
 
 steps:
-- task: Docker@2
-  displayName: Build an image
-  inputs:
-    repository: $(imageName)
-    command: build
+# - task: Docker@2
+#   displayName: Build an image
+#   inputs:
+#     repository: $(imageName)
+#     command: build
     #Dockerfile: app/Dockerfile
 
 - task: Docker@2
@@ -24,12 +24,7 @@ steps:
 - task: Docker@2
   displayName: Push image to ACR
   inputs:
-    command: push
+    command: buildAndPush
     repository: $(imageName)
-    #dockerfile: $(dockerfilePath)
-    #acrUsername: $(ACRUsername)
-    #acrUsername: $(ACRUsername)
-    #acrUsername: $(ACRUsername)
-    containerRegistry: AcrConn
     tags: |
       latest
