@@ -30,6 +30,6 @@ steps:
     #acrUsername: $(ACRUsername)
     #acrUsername: $(ACRUsername)
     #acrUsername: $(ACRUsername)
-    containerRegistry: MyAcrConnection
+    containerRegistry: AcrConn
     tags: |
       $(tag)
