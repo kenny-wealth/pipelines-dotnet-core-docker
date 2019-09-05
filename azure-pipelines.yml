@@ -14,3 +14,13 @@ steps:
     repository: $(imageName)
     command: build
     #Dockerfile: app/Dockerfile
+
+- task: Docker@2
+  displayName: Push image to ACR
+  inputs:
+    command: push
+    repository: testrepository
+    #dockerfile: $(dockerfilePath)
+    containerRegistry: keladipotestregistry.azurecr.io/
+    tags: |
+      $(tag)
