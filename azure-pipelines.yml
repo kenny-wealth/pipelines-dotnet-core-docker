@@ -21,6 +21,6 @@ steps:
     command: push
     repository: testrepository
     #dockerfile: $(dockerfilePath)
-    containerRegistry: keladipotestregistry.azurecr.io/
+    containerRegistry: http://keladipotestregistry.azurecr.io/
     tags: |
       $(tag)
