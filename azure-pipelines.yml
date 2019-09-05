@@ -25,7 +25,7 @@ steps:
   displayName: Push image to ACR
   inputs:
     command: push
-    repository: testrepository
+    repository: $(imageName)
     #dockerfile: $(dockerfilePath)
     #acrUsername: $(ACRUsername)
     #acrUsername: $(ACRUsername)
