@@ -32,4 +32,4 @@ steps:
     #acrUsername: $(ACRUsername)
     containerRegistry: AcrConn
     tags: |
-      $(tag)
+      latest
